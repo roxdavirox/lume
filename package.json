@@ -1,0 +1,103 @@
+{
+  "name": "lume",
+  "version": "0.1.0",
+  "description": "Mobile-first React component library. Zero runtime CSS. PWA-native. Dark mode built-in.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./theme": {
+      "types": "./dist/theme/index.d.ts",
+      "import": "./dist/theme/index.mjs",
+      "require": "./dist/theme/index.js"
+    },
+    "./hooks": {
+      "types": "./dist/hooks/index.d.ts",
+      "import": "./dist/hooks/index.mjs",
+      "require": "./dist/hooks/index.js"
+    },
+    "./primitives/*": {
+      "types": "./dist/primitives/*/index.d.ts",
+      "import": "./dist/primitives/*/index.mjs",
+      "require": "./dist/primitives/*/index.js"
+    },
+    "./components/*": {
+      "types": "./dist/components/*/index.d.ts",
+      "import": "./dist/components/*/index.mjs",
+      "require": "./dist/components/*/index.js"
+    },
+    "./patterns/*": {
+      "types": "./dist/patterns/*/index.d.ts",
+      "import": "./dist/patterns/*/index.mjs",
+      "require": "./dist/patterns/*/index.js"
+    }
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build && tsc --project tsconfig.build.json",
+    "type-check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "design-system",
+    "components",
+    "mobile-first",
+    "pwa",
+    "vanilla-extract",
+    "zero-runtime",
+    "dark-mode",
+    "typescript",
+    "accessible"
+  ],
+  "author": "roxdavirox",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roxdavirox/lume.git"
+  },
+  "bugs": {
+    "url": "https://github.com/roxdavirox/lume/issues"
+  },
+  "homepage": "https://github.com/roxdavirox/lume#readme",
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^22.10.5",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^18.3.5",
+    "@vanilla-extract/css": "^1.16.2",
+    "@vanilla-extract/vite-plugin": "^4.0.18",
+    "@vitejs/plugin-react": "^4.3.4",
+    "happy-dom": "^15.11.6",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7",
+    "vite-plugin-dts": "^4.4.0",
+    "vitest": "^2.1.8"
+  }
+}
